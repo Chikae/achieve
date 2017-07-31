@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.3'
+gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -41,6 +41,9 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'pry-rails'
+  gem 'better_errors'
 end
 
 gem 'devise'
@@ -51,6 +54,13 @@ gem 'rails_12factor',group: :production
 
 gem 'faker'
 
+gem 'rails_admin'
+
+
 group :development do
   gem 'letter_opener_web'
 end
+
+gem 'cancan'
+
+gem 'activeresource'
