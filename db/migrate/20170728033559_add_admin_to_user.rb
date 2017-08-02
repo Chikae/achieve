@@ -1,9 +1,5 @@
-class AddOmniauthColumnsToUsers < ActiveRecord::Migration
+class AddAdminToUser < ActiveRecord::Migration
   def change
-    add_column :users, :uid, :string, null: false, default: ""
-    add_column :users, :provider, :string, null: false, default: ""
-    add_column :users, :image_url, :string
-
-    add_index :users, [:uid, :provider], unique: true
+    add_column :users, :admin, :boolean, :default => false
   end
 end
