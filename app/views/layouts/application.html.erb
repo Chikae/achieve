@@ -8,13 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  
+
   <header>
     <ul>
       <li><%= link_to "Achieve", root_path %></li>
       <li><%= link_to "トップページ", root_path %></li>
       <li><%= link_to "お問い合わせ", new_contact_path %></li>
       <li><%= link_to "ブログ", blogs_path %></li>
+      <li><%= link_to 'ユーザー一覧', users_path if user_signed_in? %></li>
       <% if user_signed_in? %>
         <li><%= link_to 'マイページ', edit_user_registration_path %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>

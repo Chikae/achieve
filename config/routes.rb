@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   root'top#index'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
@@ -32,6 +33,8 @@ end
     post :confirm, on: :collection
  end
 
+ resources :users, only: [:index]
+ resources :relationships, only: [:create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
