@@ -33,7 +33,7 @@ end
     post :confirm, on: :collection
  end
 
- resources :users, only: [:index]
+ resources :users, only: [:index, :show]
  resources :relationships, only: [:create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
